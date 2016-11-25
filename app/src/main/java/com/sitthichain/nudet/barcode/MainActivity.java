@@ -20,10 +20,9 @@ public class MainActivity extends AppCompatActivity {
         //Toast.makeText(DisplayMessageActivity.class, "Hello", Toast.LENGTH_LONG).show();
 
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        //EditText editText = (EditText) findViewById(R.id.editTextBarcode);
-        //String message = editText.getText().toString();
-        //intent.putExtra(EXTRA_MESSAGE, message);
-
+        EditText editText = (EditText) findViewById(R.id.editTextBarcode);
+        String message = editText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
 
         startActivity(intent);
 
