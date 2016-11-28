@@ -55,7 +55,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
     }   // OnCreate
 
     private class GetVehicleDocument extends AsyncTask<String, Void, Bitmap> {
-        private final static String SERVICE_URI = "http://172.28.52.16:8022/ServiceDocuments.svc/GetDocumentById/";
+        private final static String SERVICE_URI = "http://58.137.117.77:8022/ServiceDocuments.svc/GetDocumentById/000000000001163270/4";
         private String returnString = "";
         private Context context;
 
@@ -71,7 +71,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
             OkHttpClient httpClient = new OkHttpClient();
             RequestBody requestBody = new FormBody.Builder().build(); //documentTypeId
             Request request = new Request.Builder()
-                    .url(SERVICE_URI + params[0])
+                    .url(SERVICE_URI)
                     .build();
             Log.d("Log_V1 > ", "requestBody : " + requestBody);
             Log.d("Log_V1 > ", "Uri : " + request.url().toString());
